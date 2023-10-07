@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Teko:wght@300&display=swap');
+
+.nav-bar .nav-bar-social {
+    width: 100%;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.nav-bar .nav-bar-social img {
+    margin: 7px 20px ;
+    width: 20px;
+}
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-bar .background {
+    position: absolute;
+    width: 100%;
+    height: 120px; 
+    top:40px;   
+}
+.nav-bar .background-social {
+    position: absolute;
+    width: 100%;
+    height: 40px;    
+    background-color: #497C89  ;
+}
+.nav-bar .nav-bar-ul {
+    display: flex;
+}
+.nav-bar .nav-bar-ul .ul {
+    display: flex;
+}
+.nav-bar .nav-bar-ul .ul li {
+    display: flex;
+    list-style: none;
+    margin: auto 60px;
+    text-align: center;
+}
+.nav-bar .nav-bar-ul .ul li:hover {
+    border-bottom: 1px white solid;
+}
+.nav-bar .nav-bar-ul .ul a {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 1.5px;
+}
+.nav-bar .nav-bar-ul .logo img {
+    width: 100px;
+    transform: scale(1.2);
+    padding: 10px;
+}

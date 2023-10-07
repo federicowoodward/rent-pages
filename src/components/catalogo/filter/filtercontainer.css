@@ -1,0 +1,9 @@
+.filter-container {
+    width: 25%;
+    background-color: #d2d2d2;
+}
+
+.filter-container h2 {
+    align-self: start;
+    padding: 15px 25px;
+}
