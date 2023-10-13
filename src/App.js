@@ -18,7 +18,7 @@ function App() {
     ]
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='/rent-pages'>
             <div className="body">
                 <div className="app">
                     <NavBar />

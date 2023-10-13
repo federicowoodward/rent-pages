@@ -12,15 +12,14 @@ function TypeButton() {
             className={
                 isListVisible ? 'filter-button' : 'filter-button-hidden'
             }>
-            <button>¿Que tipo de alejamiento necesitas?</button>
-            <div>
+            <button className='relative'>¿Que tipo de alejamiento necesitas?
                 <ul className="button-option">
                     <li>Casa</li>
                     <li>Hotel</li>
                     <li>Departamento</li>
                     <li>Complejo</li>
                 </ul>
-            </div>
+            </button>
         </div>
     )
 }
