@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/rent-pages/static/css/main.43899236.css",
-    "main.js": "/rent-pages/static/js/main.eda22bfa.js",
+    "main.css": "/rent-pages/static/css/main.3f0dee5e.css",
+    "main.js": "/rent-pages/static/js/main.58758e25.js",
     "index.html": "/rent-pages/index.html",
-    "main.43899236.css.map": "/rent-pages/static/css/main.43899236.css.map",
-    "main.eda22bfa.js.map": "/rent-pages/static/js/main.eda22bfa.js.map"
+    "main.3f0dee5e.css.map": "/rent-pages/static/css/main.3f0dee5e.css.map",
+    "main.58758e25.js.map": "/rent-pages/static/js/main.58758e25.js.map"
   },
   "entrypoints": [
-    "static/css/main.43899236.css",
-    "static/js/main.eda22bfa.js"
+    "static/css/main.3f0dee5e.css",
+    "static/js/main.58758e25.js"
   ]
 }
