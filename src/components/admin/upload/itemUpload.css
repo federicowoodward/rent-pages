@@ -1,0 +1,46 @@
+.item-upload {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.item-upload form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.item-upload .input {
+    width: 300px;
+}
+.preview .carrousel-detail {
+    width: 500px;
+}
+.preview .carrousel-detail .principal {
+    width: 500px;
+    height: 300px;
+}
+.preview .carrousel-detail .nav-bar-carrousel {
+    width: 500px;
+}
+.preview .carrousel-detail .nav-bar-carrousel img {
+    height: 100px;
+}
+.preview .carrousel-detail .arrow {
+    top: 40px;
+}
+.preview  {
+    height: 100%;
+}
+.preview  p{
+    font-family: var(--font-principal);
+    font-size: 20px;
+}
+.not-supported-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 415.33px;
+}

@@ -1,3 +1,5 @@
 .catalogo-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin: auto;
 }

@@ -1,0 +1,11 @@
+.date-container .cards-container{
+    display: flex;
+    flex-direction: row;
+}
+.date-container  a {
+    font-family: var(--font-principal);
+}
+
+.cards-container .card {
+    margin: 12px;
+}

@@ -1,49 +1,55 @@
+import { useEffect } from 'react'
 import { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-function DateButton() {
+
+function DateButton(props) {
     const [startDate, setStartDate] = useState(new Date())
-    const [endDate, setEndDate] = useState(new Date())
+    const [endDate, setEndDate] = useState(null)
 
-    function setStartDateF(date) {
-        setStartDate(date)
-    }
+    useEffect(() => {
+        if (endDate !== null) {
+            const datesInRange = getDatesInRange(startDate, endDate);
+            props.filter('date', datesInRange);
+        }
+    }, [startDate, endDate]);
 
-    function setEndDateF(date) {
-        setEndDate(date)
-    }
+    const onChange = (dates) => {
+        const [start, end] = dates;
+        setStartDate(start);
+        setEndDate(end);
+    };
+
+    // Función para obtener todas las fechas dentro del rango
+    const getDatesInRange = (start, end) => {
+        const dates = [];
+        let currentDate = new Date(start);
+
+        while (currentDate <= end) {
+            dates.push(new Date(currentDate));
+            currentDate.setDate(currentDate.getDate() + 1);
+        }
+
+        return dates;
+    };
 
     return (
-        <div className="datepicker-button">
-            <div className="start-date-button">
-                <div className="date-button">
-                    <button>¿Cuando comienza tu viaje?</button>
-                </div>
+        <div className="filter-options">
+            <p className="title">¿Cuánto dura tu viaje?</p>
+            <section className="date-picker">
                 <DatePicker
                     selected={startDate}
-                    onChange={(startDate) => setStartDateF(startDate)}
-                    closeOnScroll={true}
-                    selectsStart
+                    onChange={onChange}
+                    minDate={new Date()}
                     startDate={startDate}
                     endDate={endDate}
+                    selectsRange
+                    inline
+                    showDisabledMonthNavigation
                 />
-            </div>
-            <div className="end-date-button">
-                <div className="date-button">
-                    <button>¿Cuando finaliza tu viaje?</button>
-                </div>
-                <DatePicker
-                    selected={endDate}
-                    onChange={(endDate) => setEndDateF(endDate)}
-                    closeOnScroll={true}
-                    selectsEnd
-                    startDate={startDate}
-                    endDate={endDate}
-                    minDate={startDate}
-                />
-            </div>
+            </section>
         </div>
-    )
+    );
 }
 
-export default DateButton
+export default DateButton;

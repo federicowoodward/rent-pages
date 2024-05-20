@@ -1,0 +1,44 @@
+.date-picker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.date-picker-container h2 {
+    margin: 20px;
+}
+.date-picker {
+    margin: auto;
+    position: relative;
+    
+}
+
+.date-picker .cover {
+    width: 482.29px;
+    height: 268.06px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.050);
+}
+.buttons-edit {
+    margin: 20px;
+}
+.buttons-edit button{
+    margin: 5px;
+}
+.selected-date {
+    background-color: #aaf; 
+    color: black; 
+}
+
+.database-date {
+    background-color: #afa; 
+    color: black; 
+}
+.loader-div {
+    width: 242.5px;
+    height: 261.78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

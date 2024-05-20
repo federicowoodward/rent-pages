@@ -18,6 +18,10 @@ export default function NavBar() {
     // function showMenu(){
     //     document.querySelector(".navBarUl").classList.toggle("navBarUl_visibility");
     // }
+
+    const getNavLinkClass = (path) => {
+        return location.pathname === path ? 'selected' : '';
+      };
     return (
         <div className="nav-bar">
             <div className="background" style={{backgroundColor: color}}></div>
@@ -49,27 +53,27 @@ export default function NavBar() {
                         />
                     </div>
                     <ul className="ul">
-                        <li>
+                        <li className={getNavLinkClass('/')}>
                             <p>
                                 <Link to="/">INICIO</Link>
                             </p>
                         </li>
-                        <li>
+                        <li className={getNavLinkClass('/catalogo')}>
                             <p>
                                 <Link to="/catalogo">CATALOGO</Link>
                             </p>
                         </li>
-                        <li>
+                        <li className={getNavLinkClass('/servicios')}>
                             <p>
-                                <Link to="/servicios">SERVICIOS</Link>
+                                <Link to="/eventos">EVENTOS</Link>
                             </p>
                         </li>
-                        <li>
+                        <li className={getNavLinkClass('/local')}>
                             <p>
                                 <Link to="/local">ACTIVIDADES LOCALES</Link>
                             </p>
                         </li>
-                        <li>
+                        <li className={getNavLinkClass('/contacto')}>
                             <p>
                                 <Link to="/contacto">CONTACTO</Link>
                             </p>

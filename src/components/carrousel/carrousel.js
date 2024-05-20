@@ -12,6 +12,10 @@ const Carousel = ({ images }) => {
         return () => clearInterval(interval)
     }, [currentIndex, images.length])
 
+    function goToSlide(i) {
+        setCurrentIndex(i)
+    }
+
     return (
         <div className='carrousel-nav-div'>
             <div className='title'>
@@ -39,6 +43,7 @@ const Carousel = ({ images }) => {
                             backgroundColor: index === currentIndex ? 'rgba(255, 255, 255, 0.85)' : 'rgba(0, 0, 0, 0.85)',
                         }}
                         className='span'
+                        onClick={() => {goToSlide(index)}}
                     ></div>
                 ))}
             </div>

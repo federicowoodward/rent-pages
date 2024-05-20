@@ -1,0 +1,79 @@
+.card-detail {
+    display: flex;
+    margin: 40px 0;
+}
+.card-detail .detail-info {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-detail .detail-info .separador {
+    width: 80%;
+    height: 1px;
+    margin: 15px;
+    background-color: black;
+}
+.card-detail-div h1 {
+    font-family: var(--font-principal);
+    font-size: 50px;
+    padding: 50px 0 0 50px;
+}
+.card-detail p, h2 {
+    font-family: var(--font-principal);
+}
+.detail-info .detail-div {
+    display: flex;
+    margin: 10px;
+}
+.detail-info .detail-div span {
+    color: var(--color-primary);
+    font-size: 25px;
+}
+.detail-info .detail-div .detail {
+    display: flex;
+    margin: 0 35px;
+    transform: scale(1.3);
+}
+.detail-info .detail-div .detail .text {
+    text-align: start;
+    margin-left: 3px;
+}
+.detail-info .detail-div .detail .text p {
+    font-size: 11px;
+}
+.detail-info .detail-div .detail .gray {
+    color: gray;
+}
+.card-detail .detail-info .servicios {
+    columns: 2;
+    margin: 8px;
+}
+.card-detail .detail-info .servicios-div .servicio {
+    display: flex;
+}
+.card-detail .detail-info .servicios-div .servicio span {
+    color: var(--color-primary);
+}
+.card-detail .detail-info .description {
+    margin: 20px;
+}
+.card-detail .detail-info .second-detail-div {
+    text-align: start;
+}
+.card-detail .detail-info .second-detail-div h2{
+    text-align: center;
+    font-size: 24px;
+}
+.card-detail .detail-info .second-detail-div .second-detail {
+    columns: 2;
+    margin: 8px;
+    font-size: 17px;
+}
+.card-detail .detail-info .second-detail-div .second-detail p::before{
+    content: '●';
+    color: var(--color-primary);
+    margin-right: 4px;
+}

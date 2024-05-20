@@ -9,7 +9,7 @@
     z-index: 10;
 }
 .nav-bar .nav-bar-social img {
-    margin: 7px 20px ;
+    margin: 7px 20px;
     width: 20px;
 }
 .nav-bar {
@@ -22,14 +22,14 @@
 .nav-bar .background {
     position: absolute;
     width: 100%;
-    height: 120px; 
-    top:40px;   
+    height: 120px;
+    top: 40px;
 }
 .nav-bar .background-social {
     position: absolute;
     width: 100%;
-    height: 40px;    
-    background-color: #497C89  ;
+    height: 40px;
+    background-color: var(--color-primary);
 }
 .nav-bar .nav-bar-ul {
     display: flex;
@@ -58,4 +58,8 @@
     width: 100px;
     transform: scale(1.2);
     padding: 10px;
+}
+
+.nav-bar .nav-bar-ul .ul .selected a {
+    border-bottom: 1px white solid;
 }

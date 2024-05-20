@@ -1,0 +1,21 @@
+.admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    height: 57vh;
+}
+.admin button a {
+    text-decoration: none;
+}
+.admin button  {
+    margin: 5px;
+}
+.admin p {
+    text-align: center;
+    font-size: 28px;
+    background-color: var(--color-g);
+    margin: auto;
+    padding: 16px;
+    border-radius: 10px;
+}

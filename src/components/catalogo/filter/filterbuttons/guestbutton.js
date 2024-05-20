@@ -1,31 +1,49 @@
+import TextField from '@mui/material/TextField'
+import Autocomplete from '@mui/material/Autocomplete'
 import { useState } from 'react'
 
-function GuestButton() {
-    const [isListVisible, setListVisibility] = useState(false)
-
-    function handleButtonClick() {
-        setListVisibility(!isListVisible)
-    }
+function GuestButton(props) {
+    const [guest, setGuest] = useState(null)
+    
+    const handleGuestChange = (event, newValue) => {
+        setGuest(newValue);
+        if (newValue !== null) {
+            props.filter('guest', newValue.label); 
+        } else {
+            props.filter('guest', 'reset'); 
+        }
+    };
 
     return (
-        <div
-            onClick={handleButtonClick}
-            className={
-                isListVisible ? 'filter-button' : 'filter-button-hidden'
-            }>
-            <button className='relative'>¿Cuantos huespedes son?
-                <ul className="button-option">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                </ul>
-            </button>
+        <div className="filter-options">
+            <Autocomplete
+                disablePortal
+                id="combo-box-demo"
+                options={guestsList}
+                sx={{ width: 220 }}
+                value={guest}
+                onChange={handleGuestChange}
+                renderInput={(params) => (
+                    <TextField
+                        {...params}
+                        label="¿Cuantos huespedes son?"
+                        className="text-field"
+                    />
+                )}
+            />
         </div>
     )
 }
 
-export default GuestButton
+export default GuestButton;
+
+const guestsList = [
+    { label: '1' },
+    { label: '2' },
+    { label: '3' },
+    { label: '4' },
+    { label: '5' },
+    { label: '6' },
+    { label: '7' },
+    { label: '8' },
+];

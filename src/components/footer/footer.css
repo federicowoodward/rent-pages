@@ -1,0 +1,49 @@
+.footer-container {
+    background-color: #70a8b7fe;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.footer {
+    width: 1440px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-family: var(--font-principal);
+    font-size: 20px;
+}
+
+.footer .sectionUno {
+    display: flex;
+    gap: 100px;
+}
+.footer .sectionUno .rigth {
+    padding: 20px;
+    text-align: center;
+}
+.footer .sectionUno .rigth .iconEmail {
+    display: flex;
+}
+.footer .sectionUno .rigth .iconEmail svg {
+    color: white;
+    padding: 2px;
+}
+.footer .sectionUno .nav-bar-social img {
+    height: 30px;
+    padding: 5px;
+}
+.footer .sectionUno .left {
+    margin: auto;
+}
+.footer .sectionUno .left .logo{
+    height: 100px;
+}
+.footer .sectionDos {
+    display: flex;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 15px;
+}

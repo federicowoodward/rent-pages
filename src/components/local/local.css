@@ -1,0 +1,24 @@
+.local-container-div .title{
+    margin: 20px 0 0 10px;
+}
+.local-container {
+    display: grid;
+    grid-template-columns: 23% 70%;
+    gap: 2%;
+}
+.local-container .filter {
+    margin-top: 48px;
+    height: 700px;
+}
+.local-container .filter .title {
+    margin: 18px;
+}
+.local-container .filter .item-list span {
+    font-size: 13px
+}
+.local-container .local-card {
+    margin-top: 20px;
+}
+.local-container #first {
+    margin-top: 0px;
+}

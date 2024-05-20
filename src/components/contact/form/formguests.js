@@ -1,13 +1,14 @@
 import './formguest.css'
-function Form() {
+import './../../helpers/button.css'
+function Form(showExtendedForm) {
     return (
-        <div class="card">
-            <form class="form">
-                <div class="group">
+        <div className="form-container-contact">
+            <form className="form">
+                <div className="group">
                     <input placeholder="" type="text" required="" />
-                    <label for="name">Nombre y apellido</label>
+                    <label htmlFor="name">Nombre y apellido</label>
                 </div>
-                <div class="group">
+                <div className="group">
                     <input
                         placeholder=""
                         type="email"
@@ -15,18 +16,62 @@ function Form() {
                         name="email"
                         required=""
                     />
-                    <label for="email">Direccion de correo</label>
+                    <label htmlFor="email">Direccion de correo</label>
                 </div>
-                <div class="group">
+                {showExtendedForm.showExtendedForm && (
+                    <>
+                        <div className="flex">
+                            <div className="group check">
+                                <input
+                                    placeholder=""
+                                    type="checkin"
+                                    id="checkin"
+                                    name="checkin"
+                                    required=""
+                                />
+                                <label htmlFor="checkin">Fecha de ingreso</label>
+                            </div>
+                            <div className="group check">
+                                <input
+                                    placeholder=""
+                                    type="checkout"
+                                    id="checkout"
+                                    name="checkout"
+                                    required=""
+                                />
+                                <label htmlFor="checkout">Fecha de egreso</label>
+                            </div>
+                        </div>
+                        <div className="group">
+                            <input
+                                placeholder=""
+                                type="huespedes"
+                                id="huespedes"
+                                name="huespedes"
+                                required=""
+                            />
+                            <label htmlFor="huespedes">Cantidad de huespedes</label>
+                        </div>
+                    </>
+                )}
+                <div className="group">
                     <textarea
                         placeholder=""
                         id="comment"
                         name="comment"
                         rows="5"
                         required=""></textarea>
-                    <label for="comment">Tu mensaje</label>
+                    <label htmlFor="comment">Tu mensaje</label>
                 </div>
-                <button type="submit">Submit</button>
+
+                <button className="button-primary" type="submit">
+                    <span className="circle1"></span>
+                    <span className="circle2"></span>
+                    <span className="circle3"></span>
+                    <span className="circle4"></span>
+                    <span className="circle5"></span>
+                    <span className="text">Enviar</span>
+                </button>
             </form>
         </div>
     )

@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
 .app {
-  width: 1440px;
+    width: 1440px;
 }
 .body {
-  height: 200vh;
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-grey);
 }
 * {
-  margin: 0px;
-  padding: 0px;
+    margin: 0px;
+    padding: 0px;
+    --color-primary: #497C89;
+    --background-grey: #F3F7F9;
+    --font-principal: 'Montserrat', sans-serif;
+}
+*, ::after, ::before {
+    box-sizing: content-box;
 }
